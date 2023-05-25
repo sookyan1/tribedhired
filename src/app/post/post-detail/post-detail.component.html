@@ -1,0 +1,17 @@
+<ng-container *ngIf="!isLoading">
+    <div [routerLink]="['../']" class="back">Go back</div>
+
+    <div class="post">
+        <h2>{{post.title}}</h2>
+        <p>{{post.body}}</p>
+    </div>
+
+    <input type="text" name="search" class="search" placeholder="Search Comment" autofocus ngModel (input)="search($event)">
+
+
+    <div class="comment-wrapper">
+        <app-post-comment [comment]="comment" *ngFor="let comment of comments"></app-post-comment>
+    </div>
+</ng-container>
+
+<div *ngIf="isLoading">loading...</div>

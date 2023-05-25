@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+
+.post {
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 1rem;
+    cursor: pointer;
+    background-color: beige;
+    text-align: left;
+
+    &:hover {
+        background-color: bisque;
+    }
+}
+
